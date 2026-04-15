@@ -2,6 +2,10 @@
 
 Solución al reto Huddle landing page with a single introductory section https://www.frontendmentor.io/challenges/huddle-landing-page-with-a-single-introductory-section-B_2Wvxgi0 de Frontend Mentor.
 
+## Vista previa
+
+https://philivg.github.io/-Huddle-Landing-Page/
+
 ## Construido con
 
 - HTML5
