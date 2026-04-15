@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+:root {
+    --bg-color: hsl(257, 40%, 49%);
+    --bg-button-color: hsl(0, 0%, 100%);
+    --bg-button-hover-color: hsl(301, 70%, 71%);
+    --p-color: hsl(40, 43%, 99%);
+
+    --p-button-color: hsl(257, 40%, 49%);
+    --p-button-hover-color: hsl(0, 0%, 100%);
+    --bs-button: hsl(257, 40%, 49%);
+
+    --bd-redes-color: hsl(266, 60%, 86%);
+
+    --fm: "Poppins", sans-serif;
+    --fs: 16px;
+    --fs-sm: 0.875rem;
+    --fs-md: 1rem;
+    --fs-lg: 1.25rem;
+    --fs-xl: 1.5rem;
+    --fs-2xl: 2rem;
+    --fs-3xl: 3rem;
+}
+
+body {
+    font-size: var(--fs);
+    font-family: var(--fm);
+    color: var(--p-color);
+    height: 100dvh;
+    line-height: 1.5;
+
+    background-color: var(--bg-color);
+    background-image: url(../images/bg-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+
+
+    h1 {
+        line-height: 1.1;
+        font-size: var(--fs-2xl);
+        font-weight: 600;
+    }
+}
+
+.container {
+    flex-grow: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: 3rem;
+}
+
+header {
+    align-self: start;
+}
+
+.build-img img {
+    margin-block: 3rem;
+}
+
+.build-info {
+    height: 100%;
+    text-align: center;
+
+    h1 {
+        width: 400px;
+    }
+
+    p {
+        width: clamp(330px, 50vw, 380px);
+    }
+
+    button {
+        margin-top: 5px;
+        width: 210px;
+        padding-block: 12px;
+        border-radius: 2rem;
+        border: none;
+        cursor: pointer;
+        color: var(--p-button-color);
+        box-shadow: 0 0 7px 2px var(--bs-button);
+        transition: color 0.2s ease-out, transform 0.3s ease-out, background 0.2s ease-in;
+    }
+
+    button:hover {
+        transform: scale(1.05);
+        color: var(--p-button-hover-color);
+        background-color: var(--bg-button-hover-color);
+    }
+
+    button:active {
+        transform: scale(0.98);
+    }
+}
+
+.build-info,
+.build-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+
+}
+
+.build-content {
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.build-links {
+    display: flex;
+    margin-top: 3rem;
+    gap: 1rem;
+
+
+
+    div {
+        border: 2px solid var(--bd-redes-color);
+        padding: 10px;
+        border-radius: 50%;
+    }
+
+}
+
+@media (width>=1024px) {
+    .container {
+        flex-direction: row;
+    }
+
+    .build-content {
+        align-items: start;
+
+        p,
+        h1 {
+            text-align: left;
+        }
+
+        p {
+            width: 510px;
+        }
+    }
+
+    .build-links {
+        align-self: flex-end;
+    }
+}
+
+footer {
+    font-size: 0.6875rem;
+    text-align: center;
+}
+
+footer a {
+    color: hsl(228, 45%, 44%);
+}
